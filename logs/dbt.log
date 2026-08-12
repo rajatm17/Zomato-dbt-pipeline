@@ -1,0 +1,49 @@
+==================== 2026-08-04T13:09:15.682287Z | 019fcce4-830e-72e3-a501-16902a8037c4 ====================
+13:09:15.686300 [info ]: Installing dbt project and profile setup
+13:09:15.694279 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+13:09:15.695551 [info ]: Success Project created successfully!
+13:09:15.695734 [info ]: Info Project name: jaffle_shop
+13:09:15.695765 [info ]: Info Project directory: jaffle_shop
+13:09:17.848553 [info ]: Info Setting up your profile...
+13:09:17.852449 [info ]: Loading ~/.dbt/profiles.yml
+13:09:17.889584 [info ]: Profile 'jaffle_shop' already exists. You can choose how to proceed.
+13:09:21.419221 [info ]: Info Editing existing profile...
+13:09:22.236470 [info ]: Editing existing profile - skipping cloud config fetch
+13:09:38.152132 [info ]: Info Backup created at /Users/vedantmehta/.dbt/profiles.yml.bkp
+13:09:38.153535 [info ]: Success Profile written to /Users/vedantmehta/.dbt/profiles.yml
+13:09:38.154276 [info ]: Validating profile inputs, adapters, and connection
+
+13:09:38.154510 [info ]: dbt-fusion 2.0.0-preview.204
+13:09:38.157997 [info ]: Started loading project
+13:09:38.176438 [info ]: Loading ~/.dbt/profiles.yml
+13:09:38.179702 [info ]: Finished loading project [  0.02s]
+13:09:38.182430 [info ]: Started debugging
+13:09:38.182473 [info ]: Debugging profile: dev
+13:09:38.182511 [info ]: Debugging dbt version: 2.0.0-preview.204
+13:09:38.182671 [info ]: Debugging platform: macos aarch64 (unix)
+13:09:38.182855 [info ]: Debugging adapter type: snowflake (remote)
+13:09:38.203819 [info ]: Debugging dependencies:
+  git: OK
+13:09:38.206099 [info ]: Debugging connection:
+  "account": "BFROCXV-JG17433",
+  "user": "RAJATM17",
+  "database": "ZOMATO",
+  "warehouse": "ZOMATO_WH",
+  "schema": "STAGING",
+  "role": "DBT_ROLE"
+13:09:45.567168 [debug]: Query executed on node unknown:
+select 1 as id
+13:09:45.569313 [info ]: Debugging connection test: OK
+13:09:45.569721 [info ]: Debugged All checks passed!
+13:09:45.570158 [info ]: Finished debugging [  7.39s]
+13:09:46.881969 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' successfully for target 'dev' [31.2s]
+{"data":{"log_version":3,"version":"=2.0.0-preview.204"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019fce5a-43b2-70d3-9816-c93d7c3c550d","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.204","name":"MainReportVersion","pid":70346,"thread":"tokio-rt-worker","ts":"2026-08-04T19:57:29.909799Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"/Users/vedantmehta/.local/bin/dbt license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019fce5a-43b2-70d3-9816-c93d7c3c550d","level":"debug","msg":"running dbt-fusion with arguments {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false,\"manage_state\":false}","name":"MainReportArgs","pid":70346,"thread":"tokio-rt-worker","ts":"2026-08-04T19:57:29.909850Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019fce5a-43b2-70d3-9816-c93d7c3c550d","level":"debug","msg":"No platform credentials found, skipping remote license","name":"Generic","pid":70346,"thread":"tokio-rt-worker","ts":"2026-08-04T19:57:30.048033Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019fce5a-43b2-70d3-9816-c93d7c3c550d","level":"debug","msg":"Requesting trial license from https://cloud.getdbt.com/api/private/trial-licenses/","name":"Generic","pid":70346,"thread":"main","ts":"2026-08-04T19:57:30.338568Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019fce5a-43b2-70d3-9816-c93d7c3c550d","level":"debug","msg":"Trial license retrieved","name":"Generic","pid":70346,"thread":"main","ts":"2026-08-04T19:57:31.278868Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019fce5a-43b2-70d3-9816-c93d7c3c550d","level":"debug","msg":"License loaded from trial license server","name":"Generic","pid":70346,"thread":"tokio-rt-worker","ts":"2026-08-04T19:57:31.400681Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"valid\",\n  \"licensing_enabled\": true,\n  \"features\": [\n    \"compare\",\n    \"strict-static-analysis\"\n  ],\n  \"issued_at\": \"2026-08-04T19:57:31+00:00\",\n  \"expires_at\": \"2026-08-18T19:57:20+00:00\",\n  \"license_type\": \"trial\",\n  \"machine_id\": \"428168320670dbde9904b29f3ba114cb9801ffb0c15ad51ee94582369e272592\",\n  \"days_remaining\": 13,\n  \"trial_start_date\": \"2026-08-04T19:57:20+00:00\"\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019fce5a-43b2-70d3-9816-c93d7c3c550d","level":"info","msg":"{\n  \"status\": \"valid\",\n  \"licensing_enabled\": true,\n  \"features\": [\n    \"compare\",\n    \"strict-static-analysis\"\n  ],\n  \"issued_at\": \"2026-08-04T19:57:31+00:00\",\n  \"expires_at\": \"2026-08-18T19:57:20+00:00\",\n  \"license_type\": \"trial\",\n  \"machine_id\": \"428168320670dbde9904b29f3ba114cb9801ffb0c15ad51ee94582369e272592\",\n  \"days_remaining\": 13,\n  \"trial_start_date\": \"2026-08-04T19:57:20+00:00\"\n}","name":"ShowNode","pid":70346,"thread":"tokio-rt-worker","ts":"2026-08-04T19:57:31.491777Z"}}
+{"data":{"completed_at":"2026-08-04T19:57:31.628698Z","elapsed":1.71915602684021,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019fce5a-43b2-70d3-9816-c93d7c3c550d","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [1.7s]","name":"CommandCompleted","pid":70346,"thread":"tokio-rt-worker","ts":"2026-08-04T19:57:31.628864Z"}}

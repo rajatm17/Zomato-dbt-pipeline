@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: ai
+    database : ZOMATO
+    schema: AI
+    description: "LLM-enriched tables produced bt ai/enriched_reviews.py"
+    tables:
+      - name: enriched_reviews
+        description: "Per-review sentiment + topic + key issue from the LLM."

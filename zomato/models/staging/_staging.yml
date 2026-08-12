@@ -1,0 +1,158 @@
+version: 2
+models:
+  - name: stg_orders
+    description: "This table contains the staging data of orders"
+    columns:
+      - name: order_id
+        description: "Unique identifier for each order"
+        tests: [not_null, unique]
+      - name: order_timestamp
+        description: "Timestamp when the order was placed"
+      - name: order_date
+        description: "Date when the order was placed"
+      - name: customer_id
+        description: "Unique identifier for each customer"
+        tests: [not_null]
+      - name: restaurant_id
+        description: "Unique identifier for each restaurant"
+        tests: [not_null]
+      - name: city
+        description: "City where the order was placed"
+      - name: cuisine
+        description: "Cuisine type of the restaurant"
+      - name: payment_method
+        description: "Payment method used for the order"
+      - name: order_status
+        description: "Status of the order (e.g., Delivered, Cancelled)"
+      - name: is_delivered
+        description: "Boolean indicating if the order was delivered"
+      - name: items_count
+        description: "Number of items in the order"
+      - name: sales_qty
+        description: "Total quantity of items sold in the order"
+      - name: subtotal
+        description: "Subtotal amount for the order"
+      - name: discount
+        description: "Discount applied to the order"
+      - name: delivery_fee
+        description: "Delivery fee for the order"
+      - name: gst
+        description: "GST applied to the order"
+      - name: sales_amount
+        description: "Total sales amount for the order after discounts and fees"
+      - name: customer_rating
+        description: "Rating given by the customer for the order"
+      - name: delivery_time_min
+        description: "Delivery time in minutes for the order"
+  - name: stg_order_items
+    description: "This table contains the staging data of order items"
+    columns:
+      - name: order_item_id
+        description: "Unique identifier for each order item"
+        tests: [not_null, unique]
+      - name: order_id
+        description: "Unique identifier for the order to which the item belongs"
+        tests: [not_null]
+      - name: restaurant_id
+        description: "Unique identifier for the restaurant from which the item was ordered"
+        tests: [not_null]
+      - name: f_id
+        description: "Unique identifier for the food item"
+      - name: price
+        description: "Price of the food item"
+      - name: quantity
+        description: "Quantity of the food item ordered"
+      - name: line_amount
+        description: "Total amount for the line item (price * quantity)"
+        tests: [not_null]
+  - name: stg_restaurants
+    description: "This table contains the staging data of restaurants"
+    columns:
+      - name: restaurant_id
+        description: "Unique identifier for each restaurant"
+        tests: [not_null, unique]
+      - name: name
+        description: "Name of the restaurant"
+      - name: city
+        description: "City where the restaurant is located"
+      - name: locality
+        description: "Locality or area where the restaurant is located"
+      - name: cost_for_two
+        description: "Average cost for two people at the restaurant"
+      - name: cuisine
+        description: "Cuisine type offered by the restaurant"
+      - name: license_no
+        description: "License number of the restaurant"
+  - name: stg_users
+    description: "This table contains the staging data of users"
+    columns:
+      - name: user_id
+        description: "Unique identifier for each user"
+        tests: [not_null, unique]
+      - name: user_name
+        description: "Name of the user"
+      - name: email
+        description: "Email address of the user"
+      - name: age
+        description: "Age of the user"
+      - name: gender
+        description: "Gender of the user"
+      - name: marital_status
+        description: "Marital status of the user"
+      - name: occupation
+        description: "Occupation of the user"
+      - name: monthly_income
+        description: "Monthly income of the user"
+      - name: education
+        description: "Education level of the user"
+      - name: family_size
+        description: "Size of the user's family"
+  - name: stg_food
+    description: "This table contains the staging data of food items"
+    columns:
+      - name: f_id
+        description: "Unique identifier for each food item"
+        tests: [not_null, unique]
+      - name: food_name
+        description: "Name of the food item"
+      - name: veg_or_non_veg
+        description: "Indicates whether the food item is vegetarian or non-vegetarian"
+  - name: stg_menu
+    description: "This table contains the staging data of menus"
+    columns:
+      - name: menu_id
+        description: "Unique identifier for each menu"
+        tests: [not_null]
+      - name: restaurant_id
+        description: "Unique identifier for the restaurant to which the menu belongs"
+        tests: [not_null]
+      - name: f_id
+        description: "Unique identifier for the food item in the menu"
+        tests: [not_null]
+      - name: cuisine
+        description: "Cuisine type of the food item in the menu"
+      - name: price
+        description: "Price of the food item in the menu"
+  - name: stg_reviews
+    description: "This table contains the staging data of reviews"
+    columns:
+      - name: review_id
+        description: "Unique identifier for each review"
+        tests: [not_null, unique]
+      - name: order_id
+        description: "Unique identifier for the order to which the review belongs"
+        tests: [not_null]
+      - name: customer_id
+        description: "Unique identifier for the customer who wrote the review"
+        tests: [not_null]
+      - name: restaurant_id
+        description: "Unique identifier for the restaurant being reviewed"
+        tests: [not_null]
+      - name: rating
+        description: "Rating given by the customer in the review"
+      - name: comment
+        description: "Text content of the review"
+      - name: review_date
+        description: "Date when the review was written"
+      - name: city
+        description: "City where the review was written"
